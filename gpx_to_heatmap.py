@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 import gmplot
+from gmplot import GoogleMapPlotter
 import os
 
 # set key with environment variables (dotenv)
@@ -37,7 +38,7 @@ for point in track_points:
     lons.append(this_lon)
 
 gmap = gmplot.gmplot.GoogleMapPlotter(54.5, -5.5, 6)
-gmap.heatmap(lats, lons)
+gmap.heatmap(lats, lons, threshold=10, radius=0.5, gradient=0.5, opacity=0.7, dissipating=False)
 gmap.apikey = ""
 gmap.draw("map_1.html")
 
