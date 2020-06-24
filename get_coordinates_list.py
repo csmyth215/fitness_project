@@ -3,7 +3,7 @@ import gmplot
 from gmplot import GoogleMapPlotter
 import os
 
-# set key with environment variables (dotenv)
+# to do: set key with environment variables (dotenv)
 
 
 ns = {'default_ns': "http://www.topografix.com/GPX/1/1", 'xsi': "http://www.w3.org/2001/XMLSchema-instance", 
@@ -35,4 +35,3 @@ for point in track_points:
     this_lon = float(point['lon'])
     this_tuple = (this_lat, this_lon)
     coordinates.append(this_tuple)
-

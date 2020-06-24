@@ -47,5 +47,3 @@ with open('activity_counts.csv', 'w', newline='') as csv_file:
     for activity_year in activity_count:
         for activity_month in activity_count[activity_year]:
             csvwriter.writerow([activity_year, activity_month, activity_count[activity_year][activity_month]])
-
-

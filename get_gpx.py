@@ -15,7 +15,7 @@ for key, morsel in cookie.items():
 
 
 def get_activity_list():
-    url = 'https://connect.garmin.com/modern/proxy/activitylist-service/activities/search/activities?limit=500&start=0'
+    url = 'https://connect.garmin.com/modern/proxy/activitylist-service/activities/search/activities?limit=600&start=0'
     response = requests.get(url, cookies=cookies,)
     if not response.ok:
         raise Exception("Could not retrieve activity list: %s" % (response.status_code))
